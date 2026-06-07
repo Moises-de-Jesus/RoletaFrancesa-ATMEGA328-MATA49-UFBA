@@ -35,14 +35,20 @@ main:
     OUT EIMSK,R16		
     SEI 				  
 
-    LDI R16,0b000000100 ; pull up do botão
-    OUT PORTD,R16
+	LDI R16,0x00
+	OUT DDRD,R16 ; botão como entrada
+    LDI R16,0b000000100 
+    OUT PORTD,R16 ; pull up do botão
 
-    ; configurando leds e transitores como saída
     LDI R16,0xFF
-    OUT DDRB,R16 	
+	OUT DDRC,R16 ; configura display como saída
+    OUT DDRB,R16 ; configurando leds e transitores como saída
+	RJMP start_sort	
 
 interruptRoutine:	
+	MOV UNIDADE,GANHADOR_UNIDADE
+	MOV DEZENA,GANHADOR_DEZENA
+	RCALL LIGAR_LED
     ; RCALL AnimacaoSorteio
     ; RCALL MostrarGanhador 
     ; RCALL AcenderLed -> mudar nomes quarta       
@@ -52,5 +58,5 @@ interruptRoutine:
 .nolist
 .include "display.inc"
 .include "corLed.inc"
+.include "sorteio.asm"
 .list	
-
