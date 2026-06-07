@@ -12,6 +12,8 @@
 .def GANHADOR_UNIDADE = R20
 .def GANHADOR_DEZENA = R21
 
+.def SALTO_DEZENAS = R22
+
 .ORG 0x0000 		 
 JMP main  
 
@@ -19,6 +21,7 @@ JMP main
 JMP interruptRoutine  
 
 main:
+    LDI SALTO_DEZENAS, 0xA
     LDI R16,HIGH(RAMEND)  
     OUT SPH,R16  
     LDI R16,LOW(RAMEND)  
@@ -47,5 +50,5 @@ interruptRoutine:
 
 .nolist
 .include "display.inc"
+.include "corLed.inc"
 .list	
-
