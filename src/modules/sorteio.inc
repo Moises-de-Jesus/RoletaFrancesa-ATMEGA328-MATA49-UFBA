@@ -5,17 +5,23 @@ start_sort:
     
 
 loop_sort:
+    RCALL start_mux
     CMP GANHADOR_UNIDADE, 0x0F
     BRNE inc
     CMP GANHADOR_DEZENA, 0x03
     BRNE incre
-    CMP GANHADOR_UNIDADE, 0x07
-    BRNE inc
+    in_sort:
+        CMP GANHADOR_UNIDADE, 0x07
+        BRNE inc2
     RJMP zerar
 
 inc:
     INC GANHADOR_UNIDADE
     RJMP loop_sort
+
+inc2:
+    INC GANHADOR_UNIDADE
+    RJMP in_sort
 
 incre:
     INC GANHADOR_DEZENA
