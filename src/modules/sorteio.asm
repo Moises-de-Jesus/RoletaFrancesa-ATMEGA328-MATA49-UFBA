@@ -1,17 +1,32 @@
 start_sort:
-    PUSH R17
-    LDI R17, 0xFF
+    PUSH R20
+    PUSH R21
+    LDI R20, 0xFF
+    LDI R21, 0x00
     RCALL loop_sort
-    POP R17
+    POP R21
+    POP R20
 
 loop_sort:
-    INC R17
-    CMP R17, 37
-    BREQ zerar
+    CMP R20, 0x0F
+    BRNE inc
+    CMP R21, 0x03
+    BRNE incre
+    CMP R20, 0x07
+    BRNE inc
+    RJMP zerar
+
+inc:
+    INC R20
+    RJMP loop_sort
+
+incre:
+    INC R21
+    LDI R20, 0xFF
     RJMP loop_sort
 
 zerar:
-    LDI R17, 0xFF
+    LDI R20, 0xFF
     RJMP loop_sort
 
 
