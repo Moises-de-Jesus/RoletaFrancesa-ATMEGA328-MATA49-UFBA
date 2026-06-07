@@ -6,7 +6,7 @@ start_sort:
 
 loop_sort:
     RCALL start_mux
-    CPI GANHADOR_UNIDADE, 0x0F
+    CPI GANHADOR_UNIDADE, 0x09
     BRNE incr
     CPI GANHADOR_DEZENA, 0x03
     BRNE incre
