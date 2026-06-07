@@ -9,9 +9,40 @@
 .def UNIDADE = R17
 .def DEZENA = R18
 
-main:
+.ORG 0x0000 		 
+JMP main  
 
+.ORG 0x0002 		  
+JMP interruptRoutine  
+
+main:
+    LDI R16,HIGH(RAMEND)  
+    OUT SPH,R16  
+    LDI R16,LOW(RAMEND)  
+    OUT SPL,R16 		 
+
+    LDI R16,0x02 		  
+    STS EICRA,R16		
+
+    LDI R16,0x01		
+    OUT EIMSK,R16		
+    SEI 				  
+
+    LDI R16,0b000000100 ; pull up do botão
+    OUT PORTD,R16
+
+    ; configurando leds e transitores como saída
+    LDI R16,0xFF
+    OUT DDRB,R16 	
+
+interruptRoutine:	
+    ; RCALL AnimacaoSorteio
+    ; RCALL MostrarGanhador 
+    ; RCALL AcenderLed -> mudar nomes quarta       
+
+    RETI
 
 .nolist
 .include "display.inc"
-.list
+.list	
+
