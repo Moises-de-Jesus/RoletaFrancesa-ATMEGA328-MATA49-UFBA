@@ -9,6 +9,9 @@
 .def UNIDADE = R17
 .def DEZENA = R18
 
+.def GANHADOR_UNIDADE = R20
+.def GANHADOR_DEZENA = R21
+
 .ORG 0x0000 		 
 JMP main  
 
