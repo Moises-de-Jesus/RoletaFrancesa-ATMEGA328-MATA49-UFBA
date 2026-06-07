@@ -10,10 +10,6 @@ loop_sort:
     BREQ zerar
     RJMP loop_sort
 
-loop_fim:
-    MOV ganhador, R17
-    RET
-
 zerar:
     LDI R17, 0xFF
     RJMP loop_sort
