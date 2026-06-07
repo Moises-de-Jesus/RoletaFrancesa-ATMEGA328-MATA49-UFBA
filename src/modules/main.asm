@@ -13,6 +13,7 @@
 .def GANHADOR_DEZENA = R21
 
 .def SALTO_DEZENAS = R22
+.def RESULTADO_COR = R23
 
 .ORG 0x0000 		 
 JMP main  
