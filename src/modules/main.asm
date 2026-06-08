@@ -58,5 +58,5 @@ interruptRoutine:
 .nolist
 .include "display.inc"
 .include "corLed.inc"
-.include "sorteio.asm"
+.include "sorteio.inc"
 .list	
