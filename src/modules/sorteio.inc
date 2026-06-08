@@ -1,5 +1,5 @@
 start_sort:
-    LDI GANHADOR_UNIDADE, 0xFF
+    LDI GANHADOR_UNIDADE, 0x00
     LDI GANHADOR_DEZENA, 0x00
     RJMP loop_sort
     
@@ -25,11 +25,11 @@ incr2:
 
 incre:
     INC GANHADOR_DEZENA
-    LDI GANHADOR_UNIDADE, 0xFF
+    LDI GANHADOR_UNIDADE, 0x00
     RJMP loop_sort
 
 zerar:
-    LDI GANHADOR_UNIDADE, 0xFF
+    LDI GANHADOR_UNIDADE, 0x00
     RJMP loop_sort
 
 
