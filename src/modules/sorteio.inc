@@ -29,7 +29,7 @@ incre:
     RJMP loop_sort
 
 zerar:
-    LDI RGANHADOR_UNIDADE, 0xFF
+    LDI GANHADOR_UNIDADE, 0xFF
     RJMP loop_sort
 
 
