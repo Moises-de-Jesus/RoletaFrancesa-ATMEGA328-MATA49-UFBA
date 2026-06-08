@@ -13,6 +13,7 @@ loop_sort:
     INC GANHADOR_DEZENA
     LDI GANHADOR_UNIDADE, 0x00
     in_sort:
+        RCALL start_mux
         CPI GANHADOR_UNIDADE, 0x06
         BRNE incr2
     RJMP zerar
@@ -32,6 +33,7 @@ incre:
 
 zerar:
     LDI GANHADOR_UNIDADE, 0x00
+    LDI GANHADOR_DEZENA, 0x00
     RJMP loop_sort
 
 
