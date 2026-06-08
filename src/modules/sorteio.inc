@@ -11,7 +11,7 @@ loop_sort:
     CPI GANHADOR_DEZENA, 0x03
     BRNE incre
     in_sort:
-        CPI GANHADOR_UNIDADE, 0x07
+        CPI GANHADOR_UNIDADE, 0x06
         BRNE incr2
     RJMP zerar
 
