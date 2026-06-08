@@ -8,8 +8,10 @@ loop_sort:
     RCALL start_mux
     CPI GANHADOR_UNIDADE, 0x09
     BRNE incr
-    CPI GANHADOR_DEZENA, 0x03
+    CPI GANHADOR_DEZENA, 0x02
     BRNE incre
+    INC GANHADOR_DEZENA
+    LDI GANHADOR_UNIDADE, 0x00
     in_sort:
         CPI GANHADOR_UNIDADE, 0x06
         BRNE incr2
