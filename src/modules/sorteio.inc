@@ -35,10 +35,3 @@ zerar:
     LDI GANHADOR_UNIDADE, 0x00
     LDI GANHADOR_DEZENA, 0x00
     RJMP loop_sort
-
-
-    
-
-
-
-

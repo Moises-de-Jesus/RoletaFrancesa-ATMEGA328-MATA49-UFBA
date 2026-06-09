@@ -1,9 +1,15 @@
-.equ DEZENA_PIN = PB5
-.equ UNIDADE_PIN = PB4
-.equ DISPLAY = PORTC
+.nolist
+.include "m328Pdef.inc"
+.list
 
-.def TEMP = R25
-.def LOOP = R24
+.equ DEZENA_PIN = PC3
+.equ UNIDADE_PIN = PC4
+.equ DISPLAY = PORTB
+.equ DISPLAY_G_PIN = PD3
+
+.equ LED_BRANCO = PC0
+.equ LED_VERDE = PC1
+.equ LED_VERMELHO = PC2
 
 .def UNIDADE = R17
 .def DEZENA = R18
@@ -13,6 +19,9 @@
 
 .def SALTO_DEZENAS = R22
 .def RESULTADO_COR = R23
+
+.def TEMP = R25
+.def LOOP = R24
 
 .ORG 0x0000 		 
 JMP main  
@@ -34,21 +43,28 @@ main:
     OUT EIMSK,R16		
     SEI 				  
 
-	LDI R16,0x00
-	OUT DDRD,R16 ; botão como entrada
+	LDI R16,0b000001000
+	OUT DDRD,R16 ; botão como entrada e pin g do display como saída 
     LDI R16,0b000000100 
     OUT PORTD,R16 ; pull up do botão
 
     LDI R16,0xFF
-	OUT DDRC,R16 ; configura display como saída
-    OUT DDRB,R16 ; configurando leds e transitores como saída
+	OUT DDRB,R16 ; configura display como saída
+    OUT DDRC,R16 ; configurando leds e transitores como saída
+
+	; Inicializa os displays
+	LDI UNIDADE,0
+	LDI DEZENA,0
+	RCALL start_mux
+
 	RJMP start_sort	
 
 interruptRoutine:	
 	RCALL start_anim
 	MOV UNIDADE,GANHADOR_UNIDADE
 	MOV DEZENA,GANHADOR_DEZENA
-	RCALL LIGAR_LED
+	RCALL LIGAR_LED   
+
     RETI
 
 .nolist
