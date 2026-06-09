@@ -2,10 +2,16 @@ start_anim:
     LDI UNIDADE, 0
     LDI DEZENA, 0
     LDI LOOP, 10
+    PUSH GANHADOR_UNIDADE
+    PUSH GANHADOR_DEZENA
+    LDI GANHADOR_DEZENA, 0
+    LDI GANHADOR_UNIDADE, 2
     main_anim:
     CPI LOOP, 0x00
     DEC LOOP
     BRNE add_unidade
+    POP GANHADOR_DEZENA
+    POP GANHADOR_UNIDADE
     RET
 
 add_unidade:
@@ -22,7 +28,7 @@ add_dezena:
     check:
     CPI DEZENA, 0x04
     BRGE diminuir_dezena
-    RJMP mostrar_anim
+    RJMP trocar_cor
 
 check_unidade:
     CPI UNIDADE, 0x07
@@ -37,6 +43,7 @@ diminuir_unidade:
 
 diminuir_dezena:
     SUBI DEZENA, 0x03
+    RJMP trocar_cor
     
 mostrar_anim:
     LDI R16, 100
@@ -45,3 +52,12 @@ mostrar_anim:
     DEC R16
     BRNE loop_atraso_mux
     RJMP main_anim
+
+trocar_cor:
+    RCALL LIGAR_LED
+
+    INC GANHADOR_UNIDADE
+    CPI GANHADOR_UNIDADE, 3
+    BRLO mostrar_anim
+    LDI GANHADOR_UNIDADE, 0
+    RJMP mostrar_anim
