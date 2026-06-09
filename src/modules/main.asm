@@ -1,10 +1,9 @@
-.nolist
-.include "m328Pdef.inc"
-.list
-
 .equ DEZENA_PIN = PB5
 .equ UNIDADE_PIN = PB4
 .equ DISPLAY = PORTC
+
+.def TEMP = R25
+.def LOOP = R24
 
 .def UNIDADE = R17
 .def DEZENA = R18
@@ -46,17 +45,15 @@ main:
 	RJMP start_sort	
 
 interruptRoutine:	
+	RCALL start_anim
 	MOV UNIDADE,GANHADOR_UNIDADE
 	MOV DEZENA,GANHADOR_DEZENA
 	RCALL LIGAR_LED
-    ; RCALL AnimacaoSorteio
-    ; RCALL MostrarGanhador 
-    ; RCALL AcenderLed -> mudar nomes quarta       
-
     RETI
 
 .nolist
 .include "display.inc"
 .include "corLed.inc"
 .include "sorteio.inc"
+.include "animacao.inc"
 .list	
