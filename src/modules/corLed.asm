@@ -1,7 +1,3 @@
-; Ligar verde = 2
-; Ligar vermelho = 3
-; Ligar branco = 1
-
 LIGAR_LED:
     RCALL OBTER_RESULTADO
 	RCALL DECODIFICADOR_NUMERO_COR
