@@ -68,8 +68,8 @@ interruptRoutine:
     RETI
 
 .nolist
-.include "display.inc"
-.include "corLed.inc"
-.include "sorteio.inc"
-.include "animacao.inc"
+.include "display.asm"
+.include "corLed.asm"
+.include "sorteio.asm"
+.include "animacao.asm"
 .list	
