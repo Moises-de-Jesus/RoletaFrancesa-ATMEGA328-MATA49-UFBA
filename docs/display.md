@@ -1,15 +1,3 @@
-# Interrupção do Botão de Sorteio
-
-Para iniciar o sorteio da roleta, foi utilizada a interrupção externa INT0 do ATMEGA328P. Dessa forma, o microcontrolador não precisa verificar continuamente se o botão foi pressionado, pois o próprio hardware interrompe a execução normal do programa quando ocorre o acionamento.
-
-## Funcionamento
-
-O botão foi configurado utilizando o resistor de pull-up interno do microcontrolador. Assim, enquanto o botão permanece solto, o pino mantém nível lógico alto. Quando o botão é pressionado, ocorre uma transição para nível lógico baixo, acionando a interrupção.
-
-Ao detectar esse evento, o microcontrolador executa uma rotina responsável por iniciar a animação do sorteio, atualizar os displays com o número vencedor e acender o LED correspondente à cor sorteada. Após a execução dessas ações, o programa retorna ao fluxo normal de execução.
-
-A utilização de interrupções torna o sistema mais eficiente, pois elimina a necessidade de verificações constantes do estado do botão, permitindo que o microcontrolador execute outras tarefas até que o usuário solicite um novo sorteio.
-
 # Display - Multiplexação
 
 Conforme os requisitos do roteiro desse projeto, é necessário implementar técnicas de multiplexação nos displays do projeto. Portanto, ao decorrer dessa documentação, será explicado o que é a multiplexação e como ela foi implementada no projeto.
