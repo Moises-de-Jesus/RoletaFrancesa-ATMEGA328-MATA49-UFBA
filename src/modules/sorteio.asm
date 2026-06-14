@@ -5,7 +5,8 @@ start_sort:
     LDI GANHADOR_DEZENA, 0x00   ; Inicialização da variável da dezena
     RJMP loop_sort
     
-; Loop principal do processo de sorteio, responsável fazer a continua contagem dos valores entre 0 e 36, até que ocorra a interrupção, como a contagem é muito rápida, o processo simula aleatoriedade
+; Loop principal do processo de sorteio, responsável fazer a continua contagem dos valores entre 0 e 36, até que ocorra a interrupção
+; , como a contagem é muito rápida, o processo simula aleatoriedade
 
 loop_sort:
     RCALL start_mux
