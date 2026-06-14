@@ -20,12 +20,12 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 
 ## Estrutura do Projeto
 
-- `sorteio.asm`: Responsável pela geração do número vencedor.
-- `animacao.asm`: Responsável pela animação exibida antes do resultado final.
-- `display.asm`: Implementação da multiplexação dos displays de 7 segmentos.
-- `corLed.asm`: Controle dos LEDs correspondentes às cores da roleta.
-- `interrupcao.asm`: Configuração e tratamento da interrupção do botão de sorteio.
+- [sorteio.asm](docs/sorteio.md): Responsável pela geração do número vencedor.
+- [animacao.asm](docs/animacao.md): Responsável pela animação exibida antes do resultado final.
+- [display.asm](docs/display.md): Implementação da multiplexação dos displays de 7 segmentos.
+- [corLed.asm](docs/corLed.md): Controle dos LEDs correspondentes às cores da roleta.
+- [interrupcao.asm](docs/interrupcao.md): Configuração e tratamento da interrupção do botão de sorteio.
 
-## Demonstração
+## Guia prático de uso
 
 Ao pressionar o botão de sorteio, uma animação é exibida nos displays simulando o giro da roleta. Após o término da animação, o número vencedor é apresentado juntamente com sua respectiva cor.
