@@ -17,13 +17,13 @@ main_anim:
     RET                                 ; Retorna da subrotina
 
 add_unidade:
-    LDI TEMP, 0x05                      ; Carrega o valor constante 5 em TEMP
+    LDI TEMP, 0x07                      ; Carrega o valor constante 5 em TEMP
     ADD UNIDADE, TEMP                   ; Adiciona 5 ao registrador UNIDADE
     CPI UNIDADE, 0x0A                   ; Verifica se UNIDADE >= 10 (Estouro de dígito)
     BRGE diminuir_unidade               ; Se maior ou igual a 10, desvia para ajustar unidade
 
 add_dezena:
-    LDI TEMP, 0x02                      ; Carrega o valor constante 2 em TEMP
+    LDI TEMP, 0x03                      ; Carrega o valor constante 2 em TEMP
     ADD DEZENA, TEMP                    ; Adiciona 2 ao registrador DEZENA
     CPI DEZENA, 0x03                    ; Verifica se DEZENA é igual a 3
     BREQ check_unidade                  ; Se DEZENA == 3, realiza validação extra da unidade
@@ -44,7 +44,7 @@ diminuir_unidade:
     RJMP add_dezena                     ; Prossegue para incrementar a dezena
 
 diminuir_dezena:
-    SUBI DEZENA, 0x03                   ; Ajusta o valor da dezena (subtrai 3) após estouro
+    SUBI DEZENA, 0x04                   ; Ajusta o valor da dezena (subtrai 3) após estouro
     RJMP trocar_cor                     ; Prossegue para a atualização dos LEDs
 
 mostrar_anim:
