@@ -8,3 +8,5 @@
 - 2 Transistores NPN BC-547
 - 10 resistores de 560 ohms.
 - 1 Push Button
+- 1 Protoboard
+- Jumpers
