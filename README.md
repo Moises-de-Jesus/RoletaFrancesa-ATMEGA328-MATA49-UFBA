@@ -18,13 +18,6 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 - Indicação da cor do número sorteado através de **LEDs (vermelho, verde e branco)**.
 - Acionamento do sorteio por meio de **interrupção externa** utilizando um botão conectado ao ATMEGA328P.
 
-## Tecnologias Utilizadas
-
-- Assembly AVR
-- Microcontrolador ATMEGA328P
-- SimulIDE
-- Arduino Uno (como plataforma de desenvolvimento)
-
 ## Estrutura do Projeto
 
 - `sorteio.asm`: Responsável pela geração do número vencedor.
