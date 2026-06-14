@@ -6,9 +6,9 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 
 - [Moises de Jesus Teixeira Santos](https://github.com/Moises-de-Jesus): Módulo sorteio e simulação de aleatoriedade
 - [Iury Sena](https://github.com/iuryyxd): Módulo display e execução da lógica de multiplexação no circuito
-- [Ícaro Correia do Sacramento](https://github.com/IcaroS299): Módulo corLed e execução da lógica para ascensão do led indicativo da cor do número sorteado
-- [Thayfe Souza](https://github.com/ThayfeS): Módulo animacao e execução da animação após pressionamento do botão para indicar o sorteio do número
-- [Pessoa que não importa](https://github.com/pedrohpmsdev): Nada importante
+- [Ícaro Correia do Sacramento](https://github.com/IcaroS299): Módulo corLed e execução da lógica para acender o led indicativo da cor do número sorteado
+- [Thayfe Souza](https://github.com/ThayfeS): Módulo animação e execução da animação após pressionamento do botão para indicar o sorteio do número
+- [Pedro Pinto](https://github.com/pedrohpmsdev): Label main do módulo main e execução da lógica de interrupção
 
 ## Funcionalidades
 
@@ -18,13 +18,6 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 - Indicação da cor do número sorteado através de **LEDs (vermelho, verde e branco)**.
 - Acionamento do sorteio por meio de **interrupção externa** utilizando um botão conectado ao ATMEGA328P.
 
-## Tecnologias Utilizadas
-
-- Assembly AVR
-- Microcontrolador ATMEGA328P
-- SimulIDE
-- Arduino Uno (como plataforma de desenvolvimento)
-
 ## Estrutura do Projeto
 
 - `sorteio.asm`: Responsável pela geração do número vencedor.
@@ -32,17 +25,6 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 - `display.asm`: Implementação da multiplexação dos displays de 7 segmentos.
 - `corLed.asm`: Controle dos LEDs correspondentes às cores da roleta.
 - `interrupcao.asm`: Configuração e tratamento da interrupção do botão de sorteio.
-
-## Objetivo Acadêmico
-
-O projeto foi desenvolvido para aplicar conceitos fundamentais de programação de baixo nível e arquitetura de computadores, incluindo:
-
-- Manipulação de registradores.
-- Uso de interrupções.
-- Controle de periféricos.
-- Multiplexação de displays.
-- Estruturas de controle em Assembly.
-- Integração entre software e hardware.
 
 ## Demonstração
 
