@@ -20,16 +20,27 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 
 ## Estrutura do Projeto
 
-- [sorteio.asm](docs/sorteio.md): Responsável pela geração do número vencedor.
-- [animacao.asm](docs/animacao.md): Responsável pela animação exibida antes do resultado final.
-- [display.asm](docs/display.md): Implementação da multiplexação dos displays de 7 segmentos.
-- [corLed.asm](docs/corLed.md): Controle dos LEDs correspondentes às cores da roleta.
-- [interrupcao.asm](docs/interrupcao.md): Configuração e tratamento da interrupção do botão de sorteio.
+- [sorteio.asm](src/modules/sorteio.asm): Responsável pela geração do número vencedor.
+- [animacao.asm](src/modules/animacao.asm): Responsável pela animação exibida antes do resultado final.
+- [display.asm](src/modules/display.asm): Implementação da multiplexação dos displays de 7 segmentos.
+- [corLed.asm](src/modules/corLed.asm): Controle dos LEDs correspondentes às cores da roleta.
+- [main.asm](src/modules/main.asm): Parte principal do projeto onde contém a interrupção.
 
-## Documentação Adicional
+## Documentação Adicional e Recursos
+
+### Documentação dos Módulos
+
+- [Documentação do Sorteio](docs/sorteio.md)
+- [Documentação da Animação](docs/animacao.md)
+- [Documentação do Display](docs/display.md)
+- [Documentação do Controle de Leds](docs/corLed.md)
+- [Documentação da Interrupção](docs/interrupcao.md)
+
+### Circuitos e Hardware
 
 - [Componentes e Materiais Utilizados](docs/materiais.md): Lista de todos os componentes eletrônicos usados no projeto.
 - [Circuito Físico](docs/circuito_fisico.md): Fotos do circuito físico.
+- [Arquivo do SimulIDE](circuit/CIRCUITO.sim1)
 
 ## Guia prático de uso
 
