@@ -4,11 +4,11 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 
 ## Autores
 
-- [Moises de Jesus Teixeira Santos](https://github.com/Moises-de-Jesus)
-- [Iury Sena](https://github.com/iuryyxd)
-- [Ícaro Correia do Sacramento](https://github.com/IcaroS299)
-- [Thayfe Souza](https://github.com/ThayfeS)
-- [Pessoa que não importa](https://github.com/pedrohpmsdev)
+- [Moises de Jesus Teixeira Santos](https://github.com/Moises-de-Jesus): Módulo sorteio e simulação de aleatoriedade
+- [Iury Sena](https://github.com/iuryyxd): Módulo display e execução da lógica de multiplexação no circuito
+- [Ícaro Correia do Sacramento](https://github.com/IcaroS299): Módulo corLed e execução da lógica para ascensão do led indicativo da cor do número sorteado
+- [Thayfe Souza](https://github.com/ThayfeS): Módulo animacao e execução da animação após pressionamento do botão para indicar o sorteio do número
+- [Pessoa que não importa](https://github.com/pedrohpmsdev): Nada importante
 
 ## Funcionalidades
 
@@ -17,6 +17,13 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 - **Animação visual** antes da revelação do número vencedor, simulando o movimento da roleta.
 - Indicação da cor do número sorteado através de **LEDs (vermelho, verde e branco)**.
 - Acionamento do sorteio por meio de **interrupção externa** utilizando um botão conectado ao ATMEGA328P.
+
+## Tecnologias Utilizadas
+
+- Assembly AVR
+- Microcontrolador ATMEGA328P
+- SimulIDE
+- Arduino Uno (como plataforma de desenvolvimento)
 
 ## Estrutura do Projeto
 
