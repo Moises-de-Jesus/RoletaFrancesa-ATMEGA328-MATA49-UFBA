@@ -1,3 +1,4 @@
+;salva os valores ganhadores e inicializa o loop
 
 start_anim:
     MOV UNIDADE, GANHADOR_UNIDADE       ; Copia o valor atual do ganhador para a unidade
@@ -8,6 +9,7 @@ start_anim:
     LDI GANHADOR_DEZENA, 0              ; Reseta o registrador GANHADOR_DEZENA
     LDI GANHADOR_UNIDADE, 2             ; Inicializa GANHADOR_UNIDADE com o valor 2
 
+;enquanto o loop não acabar irá incrementar os registradores
 main_anim:
     CPI LOOP, 0x00                      ; Verifica se o contador do loop chegou a zero
     DEC LOOP                            ; Decrementa o contador do loop
@@ -16,12 +18,14 @@ main_anim:
     POP GANHADOR_UNIDADE                ; Restaura GANHADOR_UNIDADE original
     RET                                 ; Retorna da subrotina
 
+;responsável por incrementar o registrador Unidade
 add_unidade:
     LDI TEMP, 0x07                      ; Carrega o valor constante 7 em TEMP
     ADD UNIDADE, TEMP                   ; Adiciona 7 ao registrador UNIDADE
     CPI UNIDADE, 0x0A                   ; Verifica se UNIDADE >= 10 (Estouro de dígito)
     BRGE diminuir_unidade               ; Se maior ou igual a 10, desvia para ajustar unidade
 
+;responsável por incrementar o registrador Dezena
 add_dezena:
     LDI TEMP, 0x03                      ; Carrega o valor constante 3 em TEMP
     ADD DEZENA, TEMP                    ; Adiciona 3 ao registrador DEZENA
@@ -32,6 +36,7 @@ check:
     BRGE diminuir_dezena                ; Se maior ou igual a 4, desvia para ajustar dezena
     RJMP trocar_cor                     ; Caso contrário, avança para a atualização dos LEDs
 
+;caso a dezena seja 3, essa rotina é acionada para manter a unidade em até no máximo 6. 
 check_unidade:
     CPI UNIDADE, 0x07                   ; Verifica se UNIDADE < 7
     BRLO pula                           ; Se UNIDADE < 7, ignora a subtração
@@ -39,14 +44,17 @@ check_unidade:
 pula:
     RJMP check                          ; Retorna para o fluxo de checagem da dezena
 
+;responsável por manter a unidade até o valor máximo de 9
 diminuir_unidade:
     SUBI UNIDADE, 0x09                  ; Ajusta o valor da unidade (subtrai 9) após estouro
     RJMP add_dezena                     ; Prossegue para incrementar a dezena
 
+;responsável por manter a dezena até o valor máximo de 3.
 diminuir_dezena:
     SUBI DEZENA, 0x04                   ; Ajusta o valor da dezena (subtrai 4) após estouro
     RJMP trocar_cor                     ; Prossegue para a atualização dos LEDs
 
+;loop para mostrar display durante um certo período
 mostrar_anim:
     LDI R16, 100                        ; Carrega o contador de iterações do delay (100 vezes)
 loop_atraso_mux:
@@ -55,6 +63,7 @@ loop_atraso_mux:
     BRNE loop_atraso_mux                ; Repete até que R16 chegue a zero
     RJMP main_anim                      ; Retorna para o fluxo principal da animação
 
+;responsável por realizar a animação dos leds
 trocar_cor:
     RCALL LIGAR_LED                     ; Chama a subrotina externa para acionar/atualizar os LEDs
 
