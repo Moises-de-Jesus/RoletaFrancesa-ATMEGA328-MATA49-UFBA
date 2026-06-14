@@ -26,6 +26,11 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 - [corLed.asm](docs/corLed.md): Controle dos LEDs correspondentes às cores da roleta.
 - [interrupcao.asm](docs/interrupcao.md): Configuração e tratamento da interrupção do botão de sorteio.
 
+## Documentação Adicional
+
+- [Componentes e Materiais Utilizados](docs/materiais.md): Lista de todos os componentes eletrônicos usados no projeto.
+- [Circuito Físico](docs/circuito_fisico.md): Fotos do circuito físico.
+
 ## Guia prático de uso
 
 Ao pressionar o botão de sorteio, uma animação é exibida nos displays simulando o giro da roleta. Após o término da animação, o número vencedor é apresentado juntamente com sua respectiva cor.
