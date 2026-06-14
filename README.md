@@ -2,6 +2,13 @@
 
 Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Básico** da **Universidade Federal da Bahia (UFBA)**, com o objetivo de simular uma **Roleta Francesa La Partage** utilizando o microcontrolador **ATMEGA328P** e programação em **Assembly AVR**.
 
+## Autores
+
+- Moises de Jesus Teixeira Santos
+- Iury Sena
+- Ícaro Correia do Sacramento
+- Thayfe Souza
+
 ## Funcionalidades
 
 - Sorteio de números entre **0 e 36** utilizando uma técnica de pseudoaleatoriedade baseada no clock do microcontrolador.
