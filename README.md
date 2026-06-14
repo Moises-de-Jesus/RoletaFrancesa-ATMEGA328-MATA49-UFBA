@@ -8,7 +8,7 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 - [Iury Sena](https://github.com/iuryyxd): Módulo display e execução da lógica de multiplexação no circuito
 - [Ícaro Correia do Sacramento](https://github.com/IcaroS299): Módulo corLed e execução da lógica para ascensão do led indicativo da cor do número sorteado
 - [Thayfe Souza](https://github.com/ThayfeS): Módulo animacao e execução da animação após pressionamento do botão para indicar o sorteio do número
-- [Pessoa que não importa](https://github.com/pedrohpmsdev): Nada importante
+- [Pedro Pinto](https://github.com/pedrohpmsdev): Label main do módulo main e execução da lógica de interrupção
 
 ## Funcionalidades
 
