@@ -4,10 +4,11 @@ Projeto desenvolvido para a disciplina **MATA49 - Programação de Software Bás
 
 ## Autores
 
-- Moises de Jesus Teixeira Santos
-- Iury Sena
-- Ícaro Correia do Sacramento
-- Thayfe Souza
+- [Moises de Jesus Teixeira Santos](https://github.com/Moises-de-Jesus)
+- [Iury Sena](https://github.com/iuryyxd)
+- [Ícaro Correia do Sacramento](https://github.com/IcaroS299)
+- [Thayfe Souza](https://github.com/ThayfeS)
+- [Pessoa que não importa](https://github.com/pedrohpmsdev)
 
 ## Funcionalidades
 
